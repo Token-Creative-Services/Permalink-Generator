@@ -1,0 +1,74 @@
+Yarn install
+npm yarn install -g
+yarn add 
+
+
+react install
+
+*yarn/npm add/install -g create-react-app
+create-react-app client
+//it should have also created a file and loaded some things in
+open app.js and start playing
+
+
+// go into the directory you would like or the instance one is stored
+*cd client 
+
+personal cd C:\Users\Danny\Desktop\Work\server\client
+*yarn start
+//should open a browser
+
+
+shopify polaris libarys
+*yarn add @shopify/polaris// you need this for UI
+
+
+shopify BUY Button functions
+yarn add shopify-buy //you need this but it does nothing till later :)
+
+
+shopify Node.js dependency
+*$ npm install --save shopify-api-node 
+//yarn installed it wrong and then broke the project for about 20 minutes Q.Q
+
+
+trouble shooting
+make sure yarn is updated to lateest version
+*yarn info //you can see current version
+*yarn upgrade // checks for the update
+*yarn add yarn //does the update
+
+
+
+time for bullshit confusing stuff ready? Go!
+
+in index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import Client from 'shopify-buy'
+import registerServiceWorker from './registerServiceWorker';//defaults intot he app probably don't need
+
+
+const client = Client.buildClient({
+    storefrontAccessToken: 'dd4d4dc146542ba7763305d71d1b3d38',//id
+    domain: 'graphql.myshopify.com'//name of the site
+  });
+  
+
+ReactDOM.render(<App client={client}/>,
+     document.getElementById('root'));
+registerServiceWorker();
+
+
+
+make sure to have their bs files from their GIT sample project or 
+eveyrthing you are working towards means nothing
+and you become very sad and fustrated and want to just cry T.T
+
+captains log day # I don't know
+things are starting to make sense and we will continue working after we take nap
+ and relax and play videogames and food and chocolate milk and omfg metally draining day yay~
+
